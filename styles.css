@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  background-image: url("images/jungle.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#title {
+  margin-bottom: 40px;
+  font-size: 5em;
+  text-shadow: 2px 2px 8px #000;
+}
+
+.animals {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.animals button {
+  width: 160px;
+  height: 160px;
+  border-radius: 25px;
+  border: none;
+  font-size: 2.2em;
+  font-weight: bold;
+  color: white;
+  background-color: rgba(0, 128, 0, 0.7);
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 10px;
+  backdrop-filter: blur(2px);
+}
+
+.animals button:active, .animals button.playing {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px yellow;
+}
+
+.b { background-image: url("images/bird.jpg"); }
+.c { background-image: url("images/cat.jpg"); }
+.d { background-image: url("images/dog.png"); }
+.f { background-image: url("images/frog.jpg"); }
+.h { background-image: url("images/horse.jpg"); }
+.r { background-image: url("images/rooster.jpg"); }
+.s { background-image: url("images/sheep.jpg"); }
+
+@media (max-width: 600px) {
+  .animals button {
+    width: 100px;
+    height: 100px;
+    font-size: 1.5em;
+  }
+  #title {
+    font-size: 2em;
+  }
+}
